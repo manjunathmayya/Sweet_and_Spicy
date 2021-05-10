@@ -25,7 +25,7 @@ namespace Sweet_and_Spicy
 
         private string Answer()
         {
-            return "?";
+            return "42";
         }
     }
 }
