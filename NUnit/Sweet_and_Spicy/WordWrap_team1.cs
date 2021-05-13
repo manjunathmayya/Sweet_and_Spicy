@@ -12,7 +12,7 @@ Like a word processor, break the line by replacing the last space in a line with
 namespace Sweet_and_Spicy
 {
     [TestFixture]
-    public class WordWrap_round1
+    public class WordWrap_team1
     {
         [Test]
         public void Given_When_Then()

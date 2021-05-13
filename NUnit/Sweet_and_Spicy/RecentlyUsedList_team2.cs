@@ -15,7 +15,7 @@ o) A bounded capacity can be specified at construction, so there is an upper lim
 namespace Sweet_and_Spicy
 {
     [TestFixture]
-    public class RecentlyUsedList_round1
+    public class RecentlyUsedList_team2
     {
         [Test]
         public void Given_When_Then()
@@ -25,7 +25,7 @@ namespace Sweet_and_Spicy
 
         private string Answer()
         {
-            return "42";
+            return "?";
         }
     }
 }
