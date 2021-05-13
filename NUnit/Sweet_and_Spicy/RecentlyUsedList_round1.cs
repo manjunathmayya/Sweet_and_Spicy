@@ -20,7 +20,7 @@ namespace Sweet_and_Spicy
         [Test]
         public void Given_When_Then()
         {
-            Assert.AreEqual("32",Answer());
+            Assert.AreEqual("55",Answer());
         }
 
         private string Answer()
