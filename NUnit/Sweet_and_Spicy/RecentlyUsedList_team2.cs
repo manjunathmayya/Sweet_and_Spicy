@@ -1,4 +1,8 @@
-﻿using System.Collections.Generic;
+﻿/* -------------------------------------------------------------------------------------------------
+   Restricted. Copyright (C) Siemens Healthcare GmbH, 2021. All rights reserved.
+   ------------------------------------------------------------------------------------------------- */
+
+using System.Collections.Generic;
 
 using NUnit.Framework;
 
@@ -19,20 +23,30 @@ namespace Sweet_and_Spicy
     [TestFixture]
     public class RecentlyUsedList_team2
     {
-        [TestCase()]
-        public void ListReturnsExpectedItems()
-        {
+        private List<string> myList;
 
+        [SetUp]
+        public void Setup()
+        {
+            myList = new List<string>();
         }
+
+        [TestCase( "1", "1" )]
+        public void ListReturnsExpectedItems( string input, string outp )
+        {
+            Assert.AreEqual( outp, GetList( input ) );
+        }
+
         [Test]
         public void ListReturnsEmptyList()
         {
-            Assert.AreEqual(0,GetList().Count);
+            Assert.AreEqual( 0, GetList( "" ).Count );
         }
 
-        private List<string> GetList()
+        private List<string> GetList( string input )
         {
-            return new List<string>();
+            myList.Add( input );
+            return myList;
         }
     }
 }
