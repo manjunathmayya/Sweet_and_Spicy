@@ -31,8 +31,14 @@ namespace Sweet_and_Spicy
             myList = new List<string>();
         }
 
-        [TestCase()]
-        public void 
+        [TestCase( "a", "a" )]
+        public void LastItemReturnedIsExpected( string input, string output )
+        {
+            var expected = new List<string> {input};
+            var retList = GetList( input );
+            int lastIndex = retList.Count - 1;
+            Assert.AreEqual( expected[ 0 ], retList[ lastIndex ] );
+        }
 
         [TestCase( "1", "1" )]
         public void ListReturnsExpectedItems( string input, string outp )
