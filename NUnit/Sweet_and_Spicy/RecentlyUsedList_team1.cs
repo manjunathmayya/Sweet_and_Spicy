@@ -11,7 +11,7 @@ Optional extras
 o) Null insertions (empty strings) are not allowed.
 o) A bounded capacity can be specified at construction, so there is an upper limit to the number of items contained, with the least recently added items dropped on overflow.
  */
-
+/* Veni Vidi Vicci - Dom*/
 namespace Sweet_and_Spicy
 {
     [TestFixture]
