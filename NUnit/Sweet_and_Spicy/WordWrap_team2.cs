@@ -17,9 +17,9 @@ namespace Sweet_and_Spicy
     [TestFixture]
     public class WordWrap_team2
     {
-        [TestCase( "ab", 1, "a\nb" )]
-        [TestCase( "abc", 1, "a\nb\nc" )]
-        [TestCase( "abcd", 1, "a\nb\nc\nd" )]
+        [TestCase( "ab", 1, "a\nb\n" )]
+        [TestCase( "abc", 1, "a\nb\nc\n" )]
+        [TestCase( "abcd", 1, "a\nb\nc\nd\n" )]
         public void Test( string input, int width, string output )
         {
             Assert.AreEqual( output, Wrap( input, width ) );
@@ -28,8 +28,12 @@ namespace Sweet_and_Spicy
         private string Wrap( string input, int width )
         {
             char[] chars = input.ToCharArray();
-            string ret = string.Join( "\n", chars );
+            foreach( char ch in chars )
+            {
 
+            }
+            string ret = string.Join( "\n", chars );
+            ret = ret + "\n";
             return ret;
         }
     }
