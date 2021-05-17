@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 
 /*
  * Develop a recently-used-list class to hold strings uniquely in Last-In-First-Out order.
@@ -17,15 +18,15 @@ namespace Sweet_and_Spicy
     [TestFixture]
     public class RecentlyUsedList_team1
     {
-        [Test]
-        public void Given_When_Then()
+        [TestCase()]
+        public void Given_String_When_List_Is_Empty_Return_Same_String()
         {
-            Assert.AreEqual("600",Answer());
+            Assert.AreEqual("123",Answer("123"));
         }
 
-        private string Answer()
+        private string Answer(String input)
         {
-            return "42";
+            return "123";
         }
     }
 }
