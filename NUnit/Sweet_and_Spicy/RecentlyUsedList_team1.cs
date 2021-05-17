@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using NUnit.Framework;
 
 /*
@@ -24,7 +25,19 @@ namespace Sweet_and_Spicy
             Assert.AreEqual(output, Answer(input));
         }
 
+        [TestCase("abc", "abc")]
+        public void Given_String_When_Provided_String_Is_First_Return_Same_String(string input, string output)
+        {
+            List<String> listString = new List<string>();
+            Assert.AreEqual(output, GetFirstElement(listString, input));
+        }
+
         private string Answer(String input)
+        {
+            return input;
+        }
+
+        private string GetFirstElement(List<String> stack, string input)
         {
             return input;
         }

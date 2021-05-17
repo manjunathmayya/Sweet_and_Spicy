@@ -5,5 +5,6 @@
     &lt;TestId&gt;NUnit3x::F3FF6EDF-36DF-4032-8FB7-99FC561E78F9::net5.0::Sweet_and_Spicy.WordWrap_team1.Given_String_When_Length_Is_Greater_Than_Number&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::F3FF6EDF-36DF-4032-8FB7-99FC561E78F9::net5.0::Sweet_and_Spicy.RecentlyUsedList_team1.Given_When_Then&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::F3FF6EDF-36DF-4032-8FB7-99FC561E78F9::net5.0::Sweet_and_Spicy.RecentlyUsedList_team1.Given_String_When_List_Is_Empty_Return_Same_String&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::F3FF6EDF-36DF-4032-8FB7-99FC561E78F9::net5.0::Sweet_and_Spicy.RecentlyUsedList_team1.Given_String_When_Provided_String_Is_First_Return_Same_String&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
