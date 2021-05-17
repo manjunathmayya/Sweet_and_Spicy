@@ -20,6 +20,7 @@ namespace Sweet_and_Spicy
         [TestCase( "ab", 1, "a\nb\n" )]
         [TestCase( "abc", 1, "a\nb\nc\n" )]
         [TestCase( "abcd", 1, "a\nb\nc\nd\n" )]
+        [TestCase( "abcd", 2, "ab\ncd\n" )]
         public void Test( string input, int width, string output )
         {
             Assert.AreEqual( output, Wrap( input, width ) );
@@ -27,14 +28,22 @@ namespace Sweet_and_Spicy
 
         private string Wrap( string input, int width )
         {
+            string returnVal = "";
             char[] chars = input.ToCharArray();
-            foreach( char ch in chars )
+            for( var i = 0; i < chars.Length; i++ )
             {
-
+                char ch = chars[ i ];
+                if( i % width == 0 )
+                {
+                    returnVal = returnVal + ch + "\n";
+                }
+                else
+                {
+                    returnVal = returnVal + ch;
+                }
             }
-            string ret = string.Join( "\n", chars );
-            ret = ret + "\n";
-            return ret;
+
+            return returnVal;
         }
     }
 }
