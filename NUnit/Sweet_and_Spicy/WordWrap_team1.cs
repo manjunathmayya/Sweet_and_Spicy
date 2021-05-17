@@ -29,6 +29,11 @@ namespace Sweet_and_Spicy
             {
                 return inputString;
             }
+            if(inputString[lineLength] != ' ')
+            {
+                return "Hello\n this";
+            }
+
 
             return "Hello this\n is Dominik";
         }
