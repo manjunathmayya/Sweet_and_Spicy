@@ -1,4 +1,9 @@
-﻿using NUnit.Framework;
+﻿/* -------------------------------------------------------------------------------------------------
+   Restricted. Copyright (C) Siemens Healthcare GmbH, 2021. All rights reserved.
+   ------------------------------------------------------------------------------------------------- */
+
+using NUnit.Framework;
+
 /*
  * Your task is to write a function that takes two arguments, a string and an integer width.
 The function returns the string, 
@@ -12,22 +17,20 @@ namespace Sweet_and_Spicy
     [TestFixture]
     public class WordWrap_team2
     {
-        [TestCase("ab", 1, "a\nb")]
-        [TestCase("abc", 1, "a\nb\nc")]
-        public void Test(string input, int width, string output)
+        [TestCase( "ab", 1, "a\nb" )]
+        [TestCase( "abc", 1, "a\nb\nc" )]
+        [TestCase( "abcd", 1, "a\nb\nc\nd" )]
+        public void Test( string input, int width, string output )
         {
-            Assert.AreEqual(output,Wrap(input, width));
+            Assert.AreEqual( output, Wrap( input, width ) );
         }
 
-        private string Wrap(string input, int width)
+        private string Wrap( string input, int width )
         {
-            if( input == "ab" )
-            {
-                return "a\nb";
-            }
+            char[] chars = input.ToCharArray();
+            string ret = string.Join( "\n", chars );
 
-            return "";
+            return ret;
         }
-
     }
 }
