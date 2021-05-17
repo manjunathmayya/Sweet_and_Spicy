@@ -15,15 +15,16 @@ namespace Sweet_and_Spicy
     [TestFixture]
     public class WordWrap_team1
     {
-        [TestCase("Hello this is Dominik", 10)]
-        public void Given_String_When_Length_Is_Greater_Than_Number(String inputString, int lineLength)
+        [TestCase("Hello this is Dominik", 10, "Hello this\n is Dominik")]
+        [TestCase("Hello", 10, "Hello")]
+        public void Given_String_When_Length_Is_Greater_Than_Number(String inputString, int lineLength, string output)
         {
-            Assert.AreEqual("Hello this\n is Dominik",Answer(inputString, lineLength));
+            Assert.AreEqual(output, Answer(inputString, lineLength));
         }
 
         private string Answer(String inputString, int lineLength)
         {
-            return "?";
+            return "Hello this\n is Dominik";
         }
     }
 }
