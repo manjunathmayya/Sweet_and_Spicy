@@ -31,10 +31,15 @@ namespace Sweet_and_Spicy
             myList = new List<string>();
         }
 
+        [TestCase()]
+        public void 
+
         [TestCase( "1", "1" )]
         public void ListReturnsExpectedItems( string input, string outp )
         {
-            Assert.AreEqual( outp, GetList( input ) );
+            var expected = new List<string>();
+            expected.Add( outp );
+            Assert.AreEqual( expected, GetList( input ) );
         }
 
         [Test]
@@ -45,7 +50,11 @@ namespace Sweet_and_Spicy
 
         private List<string> GetList( string input )
         {
-            myList.Add( input );
+            if( input != string.Empty )
+            {
+                myList.Add( input );
+            }
+
             return myList;
         }
     }
