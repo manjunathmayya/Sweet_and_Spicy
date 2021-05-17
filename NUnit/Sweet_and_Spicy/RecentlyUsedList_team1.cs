@@ -32,6 +32,18 @@ namespace Sweet_and_Spicy
             Assert.AreEqual(output, GetFirstElement(listString, input));
         }
 
+        [TestCase("abc", "abc")]
+        public void Given_List_With2Items_Return_Last_ItemFromList(string input, string output)
+        {
+            List<String> listString = new List<string>();
+            Assert.AreEqual(output, GetLastElement(listString, input));
+        }
+
+        private string GetLastElement(List<string> listString, string input)
+        {
+            return listString[listString.Count - 1];
+        }
+
         private string Answer(String input)
         {
             return input;
