@@ -12,15 +12,22 @@ namespace Sweet_and_Spicy
     [TestFixture]
     public class WordWrap_team2
     {
-        [Test]
-        public void Given_When_Then()
+        [TestCase("ab", 1, "a\nb")]
+        [TestCase("abc", 1, "a\nb\nc")]
+        public void Test(string input, int width, string output)
         {
-            Assert.AreEqual("42",Answer());
+            Assert.AreEqual(output,Wrap(input, width));
         }
 
-        private string Answer()
+        private string Wrap(string input, int width)
         {
-            return "?";
+            if( input == "ab" )
+            {
+                return "a\nb";
+            }
+
+            return "";
         }
+
     }
 }
