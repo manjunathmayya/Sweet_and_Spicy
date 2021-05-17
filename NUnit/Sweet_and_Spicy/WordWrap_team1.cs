@@ -17,6 +17,7 @@ namespace Sweet_and_Spicy
     {
         [TestCase("Hello this is Dominik", 10, "Hello this\n is Dominik")]
         [TestCase("Hello", 10, "Hello")]
+        [TestCase("Hello this", 7, "Hello\n this")]
         public void Given_String_When_Length_Is_Greater_Than_Number(String inputString, int lineLength, string output)
         {
             Assert.AreEqual(output, Answer(inputString, lineLength));
@@ -24,6 +25,11 @@ namespace Sweet_and_Spicy
 
         private string Answer(String inputString, int lineLength)
         {
+            if (inputString.Length <= lineLength)
+            {
+                return inputString;
+            }
+
             return "Hello this\n is Dominik";
         }
     }
