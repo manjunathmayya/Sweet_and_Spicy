@@ -18,15 +18,15 @@ namespace Sweet_and_Spicy
     [TestFixture]
     public class RecentlyUsedList_team1
     {
-        [TestCase()]
-        public void Given_String_When_List_Is_Empty_Return_Same_String()
+        [TestCase("123", "123")]
+        public void Given_String_When_List_Is_Empty_Return_Same_String(string input, string output)
         {
-            Assert.AreEqual("123",Answer("123"));
+            Assert.AreEqual(output, Answer(input));
         }
 
         private string Answer(String input)
         {
-            return "123";
+            return input;
         }
     }
 }
