@@ -36,6 +36,8 @@ namespace Sweet_and_Spicy
         public void Given_List_With2Items_Return_Last_ItemFromList(string input, string output)
         {
             List<String> listString = new List<string>();
+            listString.Add("123");
+            listString.Add("abc");
             Assert.AreEqual(output, GetLastElement(listString, input));
         }
 
@@ -51,7 +53,7 @@ namespace Sweet_and_Spicy
 
         private string GetFirstElement(List<String> stack, string input)
         {
-            return input;
+            return stack[0];
         }
     }
 }
