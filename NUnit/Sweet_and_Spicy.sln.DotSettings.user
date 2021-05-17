@@ -2,6 +2,6 @@
 	<s:Boolean x:Key="/Default/Environment/UnitTesting/NUnitProvider/UseCustomNUnit/@EntryValue">False</s:Boolean>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b738c460_002D7b20_002D4f98_002Dba58_002Df39a53612681/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="KataTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::F3FF6EDF-36DF-4032-8FB7-99FC561E78F9::net5.0::KataNUnit.KataTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::F3FF6EDF-36DF-4032-8FB7-99FC561E78F9::net5.0::Sweet_and_Spicy.WordWrap_team1.Given_String_When_Length_Is_Greater_Than_Number&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

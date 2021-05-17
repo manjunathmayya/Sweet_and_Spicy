@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 
 /*
  * Your task is to write a function that takes two arguments, a string and an integer width.
@@ -14,13 +15,13 @@ namespace Sweet_and_Spicy
     [TestFixture]
     public class WordWrap_team1
     {
-        [Test]
-        public void Given_When_Then()
+        [TestCase("Hello this is Dominik", 10)]
+        public void Given_String_When_Length_Is_Greater_Than_Number(String inputString, int lineLength)
         {
-            Assert.AreEqual("42",Answer());
+            Assert.AreEqual("Hello this\n is Dominik",Answer(inputString, lineLength));
         }
 
-        private string Answer()
+        private string Answer(String inputString, int lineLength)
         {
             return "?";
         }
